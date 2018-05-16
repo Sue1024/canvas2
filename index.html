@@ -9,9 +9,9 @@
         var init = function(){
             var data = [
               { data: 20, color: "grey", label: "2017" },
-              { data: 30, color: "red", label: "2018" },
-              { data: 30, color: "orange", label: "2019" },
-              { data: 10, color: "black", label: "2010"}
+              { data: 20, color: "red", label: "2018" },
+              { data: 20, color: "orange", label: "2019" },
+              { data: 20, color: "black", label: "2010"}
             ];
             var options = {
                 title: {
@@ -23,11 +23,13 @@
                 tooltip: {
                     template: '<div>Year: {{label}}</div><div>Production: {{data}}</div>',
                     font: {
-                      family: "Arial"
+                      family: "Arial",
+                      size: 3,
+                      weight: 'light'
                     }
                 }
             }
-            drawCircle(data, document.getElementById("drawing"), options);
+            drawPie(data, document.getElementById("drawing"), options);
         };
 
         window.onload = function() {
